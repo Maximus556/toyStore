@@ -1,51 +1,45 @@
+
 public class Toy {
-    private String id;
+    private int id;
     private String name;
-    private int frequency;
+    private int count;
     private double weight;
 
-    public Toy(String id, String name, int frequency, double weight) {
+    
+    public Toy(int id, String name, int count, double weight) {
         this.id = id;
         this.name = name;
-        this.frequency = frequency;
-        this.weight = weight;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getFrequency() {
-        return frequency;
-    }
-
-    public void setFrequency(int frequency) {
-        this.frequency = frequency;
-    }
-
-    public double getWeight() {
-        return weight;
-    }
-
-    public void setWeight(double weight) {
-        this.weight = weight;
-    }
-    public void updateToy(String name, int frequency, double weight) {
-        this.name = name;
-        this.frequency = frequency;
+        this.count = count;
         this.weight = weight;
     }
     
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public int getCount() {
+        return count;
+    }
+    public void setCount(int count) {
+        this.count = count;
+    }
+    public double getWeight() {
+        return weight;
+    }
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+    @Override
+    public String toString() {
+        return "id=" + this.id + ", название=" + this.name + ", количество=" + this.count + ", вес=" + this.weight + "\n";
+    }
 }
