@@ -3,9 +3,14 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.Comparator;
 import java.util.PriorityQueue;
+import java.util.Scanner;
+import java.util.UUID;
 
 public class ToyStore {
     public static void main(String[] args) {
+        
+
+
         // Создание массивов:
         String[] ids = {"1", "2", "3"};
         int[] frequencies = {10, 5, 3};
@@ -17,6 +22,13 @@ public class ToyStore {
         for (int i = 0; i < ids.length; i++) {
             toys.add(new Toy(ids[i], "Toy " + ids[i], frequencies[i], weights[i]));
         }
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter toy details (name, frequency, weight):");
+        String name = scanner.nextLine();
+        int frequency = scanner.nextInt();
+        double weight = scanner.nextDouble();
+        Toy newToy = new Toy(UUID.randomUUID().toString(), name, frequency, weight);
+        toys.add(newToy);
 
         // Запись в файл:
 

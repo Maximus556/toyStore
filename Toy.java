@@ -42,4 +42,10 @@ public class Toy {
     public void setWeight(double weight) {
         this.weight = weight;
     }
+    public void updateToy(String name, int frequency, double weight) {
+        this.name = name;
+        this.frequency = frequency;
+        this.weight = weight;
+    }
+    
 }
